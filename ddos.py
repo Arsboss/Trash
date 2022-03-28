@@ -3,5 +3,5 @@ import requests
 url = input()
 
 while True:
-    result = requests.get(url)
+    result = requests.get('http://' + url)
     print(result)
