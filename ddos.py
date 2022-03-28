@@ -1,7 +1,6 @@
 import requests
 
-url = input()
 
 while True:
-    result = requests.get(url)
+    result = requests.get('http://cogentv2.dstat.org/')
     print(result)
